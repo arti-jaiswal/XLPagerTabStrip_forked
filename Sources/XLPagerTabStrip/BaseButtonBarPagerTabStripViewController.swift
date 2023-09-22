@@ -349,9 +349,12 @@ open class ExampleBaseButtonBarPagerTabStripViewController: BaseButtonBarPagerTa
         cell.label.text = indicatorInfo.title
         cell.accessibilityLabel = indicatorInfo.accessibilityLabel
         if let image = indicatorInfo.image {
+            cell.imageView.isHidden = false
             cell.imageView.image = image
         }
+
         if let highlightedImage = indicatorInfo.highlightedImage {
+            cell.imageView.isHidden = false
             cell.imageView.highlightedImage = highlightedImage
         }
     }
